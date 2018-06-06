@@ -89,4 +89,13 @@ class MemberDm {
   
   }
 
+  /**
+   * 查询会员列表
+   */
+  public function listQuery($params) {
+  
+    return \App\request('App.Member.ListQuery', $params);
+  
+  }
+
 }

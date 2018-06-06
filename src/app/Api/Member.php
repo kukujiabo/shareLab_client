@@ -84,6 +84,7 @@ class Member extends BaseApi {
 
   /**
    * 会员注册
+   * @desc 会员注册
    * 
    * @return 
    */
@@ -95,6 +96,7 @@ class Member extends BaseApi {
 
   /**
    * 账号密码登录
+   * @desc 账号密码登录
    *
    * @return
    */
@@ -106,6 +108,7 @@ class Member extends BaseApi {
 
   /**
    * 编辑会员信息
+   * @desc 编辑会员信息
    *
    * @return
    */
@@ -117,6 +120,7 @@ class Member extends BaseApi {
 
   /**
    * 更新会员密码
+   * @desc 更新会员密码
    *
    * @return
    */
@@ -128,6 +132,7 @@ class Member extends BaseApi {
 
   /**
    * 验证码登录
+   * @desc 验证码登录
    *
    * @return
    */
@@ -139,6 +144,7 @@ class Member extends BaseApi {
 
   /**
    * 查看账号是否存在
+   * @desc 查看账号是否存在
    *
    * @return
    */
@@ -151,10 +157,24 @@ class Member extends BaseApi {
   /**
    * 微信小程序登录
    * @desc 微信小程序登录
+   *
+   * @return array data
    */
   public function wechatMiniLogin() {
   
     return $this->dm->wechatMiniLogin($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询列表
+   * @desc 查询列表
+   *
+   * @return array list
+   */
+  public function listQuery() {
+  
+    return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
   
   }
 
