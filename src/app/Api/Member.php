@@ -68,7 +68,13 @@ class Member extends BaseApi {
       
         'app_name' => 'app_name|string|true||引用名称',
 
-        'code' => 'code|string|true||微信code'
+        'code' => 'code|string|true||微信code',
+
+        'member_name' => 'member_name|string|false||会员名称',
+
+        'portrait' => 'portrait|string|false||会员头像',
+
+        'gender' => 'gender|int|false||会员性别'
       
       ]
     
