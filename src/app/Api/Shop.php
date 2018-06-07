@@ -20,7 +20,7 @@ class Shop extends BaseApi {
 
       'focusShop' => [
       
-        'shop_id' => 'shop|int|true||门店id'
+        'shop_id' => 'shop_id|int|true||门店id'
       
       ],
 
