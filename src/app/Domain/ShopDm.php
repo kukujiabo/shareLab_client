@@ -39,4 +39,10 @@ class ShopDm {
   
   }
 
+  public function getFocusUnionList($params) {
+  
+    return \App\request('App.MemberFavoriteShop.GetUnionInfoList', $params);
+  
+  }
+
 }

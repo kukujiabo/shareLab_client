@@ -28,6 +28,18 @@ class Shop extends BaseApi {
       
         'id' => 'id|int|true||关注id'
       
+      ],
+
+      'getFocusUnionList' => [
+
+        'member_id' => 'member_id|int|false||会员id',
+        'shop_id' => 'shop_id|int|false||门店id',
+        'focus' => 'focus|int|false||关注状态',
+        'fields' => 'fields|int|false||字段',
+        'order' => 'fields|int|false||排序',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+
       ]
     
     
@@ -68,6 +80,18 @@ class Shop extends BaseApi {
   public function cancelFocus() {
   
     return $this->dm->cancelFocus($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 用户关注门店列表接口
+   * @desc 用户关注门店列表接口
+   *
+   * @return array list
+   */
+  public function getFocusUnionList() {
+  
+    return $this->dm->getFocusUnionList($this->retriveRuleParams(__FUNCTION__));
   
   }
 
