@@ -21,7 +21,7 @@ class ShopDm {
 
     $params['member_id'] = $this->_member->id;
   
-    return \App\request('App.Member.Register', $params);
+    return \App\request('App.Shop.GetDetail', $params);
   
   }
 
