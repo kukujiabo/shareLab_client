@@ -5,13 +5,13 @@ class RewardDm {
 
   public function rewardShopUnionList($data) {
   
-    return \App\request('App.Reward.GetDetail', $data);
+    return \App\request('App.Reward.RewardShopUnionList', $data);
   
   }
 
   public function getDetail($data) {
   
-    return \App\request('App.Reward.RewardShopUnionList', $data);
+    return \App\request('App.Reward.GetDetail', $data);
   
   }
 
