@@ -25,4 +25,18 @@ class ShopDm {
   
   }
 
+  public function focusShop($params) {
+  
+    $params['member_id'] = $this->_member->id;
+
+    return \App\request('App.MemberFavoriteShop.Create', $params);
+  
+  }
+
+  public function cancelFocus($params) {
+  
+    return \App\request('App.MemberFavoriteShop.CancelFocus', $params);
+  
+  }
+
 }

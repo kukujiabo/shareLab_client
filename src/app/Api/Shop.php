@@ -14,7 +14,19 @@ class Shop extends BaseApi {
     
       'getDetail' => [
       
-        'id' => 'id|int|true||门店id'
+        'id' => 'id|int|true||门店id',
+      
+      ],
+
+      'focusShop' => [
+      
+        'shop_id' => 'shop|int|true||门店id'
+      
+      ],
+
+      'cancelFocus' => [
+      
+        'id' => 'id|int|true||关注id'
       
       ]
     
@@ -32,6 +44,30 @@ class Shop extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 关注店铺
+   * @desc 关注店铺
+   *
+   * @return int id
+   */
+  public function focusShop() {
+  
+    return $this->dm->focusShop($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 取消关注
+   * @desc 取消关注
+   *
+   * @return int num
+   */
+  public function cancelFocus() {
+  
+    return $this->dm->cancelFocus($this->retriveRuleParams(__FUNCTION__));
   
   }
 
