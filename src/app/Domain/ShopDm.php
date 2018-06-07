@@ -40,6 +40,12 @@ class ShopDm {
   }
 
   public function getFocusUnionList($params) {
+
+    if ($params['member_id'] == 0) {
+    
+      $params['member_id'] = $this->_member->id;
+    
+    }
   
     return \App\request('App.MemberFavoriteShop.GetUnionInfoList', $params);
   
