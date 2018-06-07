@@ -40,6 +40,12 @@ class Shop extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
 
+      ],
+
+      'getFocusCount' => [
+      
+        'shop_id' => 'shop_id|int|true||门店id'
+      
       ]
     
     
@@ -92,6 +98,18 @@ class Shop extends BaseApi {
   public function getFocusUnionList() {
   
     return $this->dm->getFocusUnionList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询门店关注量
+   * @desc 查询门店关注量
+   *
+   * @return array list
+   */
+  public function getFocusCount() {
+  
+    return $this->dm->getFocusCount($this->retriveRuleParams(__FUNCTION__));
   
   }
 
