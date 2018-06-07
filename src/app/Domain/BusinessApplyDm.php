@@ -1,6 +1,8 @@
 <?php
 namespace App\Domain;
 
+use App\Library\RedisClient;
+
 class BusinessApplyDm {
 
   protected $_member; 
