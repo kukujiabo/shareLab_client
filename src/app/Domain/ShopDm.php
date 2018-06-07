@@ -45,4 +45,12 @@ class ShopDm {
   
   }
 
+  public function getFocusCount($params) {
+
+    $params['focus'] = 1;
+  
+    return \App\request('App.MemberFavoriteShop.GetFocusCount', $params);
+  
+  }
+
 }
