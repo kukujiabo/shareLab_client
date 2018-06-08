@@ -25,7 +25,7 @@ class MemberRewardDm {
   
   }
 
-  public function create() {
+  public function create($params) {
   
     $params['member_id'] = $this->_member->id;
   
