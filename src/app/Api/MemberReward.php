@@ -18,8 +18,15 @@ class MemberReward extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
       
+      ],
+
+      'create' => [
+      
+        'reward_id' => 'reward_id|int|true||赠品id',
+        'reference' => 'reference|int|true||赠品来源',
+        'type' => 'type|int|true||赠品类型'
+      
       ]
-    
     
     ]); 
   
@@ -34,6 +41,18 @@ class MemberReward extends BaseApi {
   public function getInsList() {
   
     return $this->dm->getInsList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 领取赠品
+   * @desc 领取赠品
+   *
+   * @return int id
+   */
+  public function create() {
+  
+    return $this->dm->create($this->retriveRuleParams(__FUNCTION__));
   
   }
 

@@ -25,5 +25,12 @@ class MemberRewardDm {
   
   }
 
+  public function create() {
+  
+    $params['member_id'] = $this->_member->id;
+  
+    return \App\request('App.MemberReward.Create', $params);
+  
+  }
 
 }
