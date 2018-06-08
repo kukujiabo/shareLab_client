@@ -26,6 +26,8 @@ class RewardDm {
   }
 
   public function getDetail($data) {
+
+    $data['member_id'] = $this->_member->id;
   
     return \App\request('App.Reward.GetDetail', $data);
   
