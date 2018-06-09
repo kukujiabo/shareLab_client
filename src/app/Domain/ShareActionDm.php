@@ -17,7 +17,7 @@ class ShareActionDm {
 
   }
 
-  public function create($data) {
+  public function create($params) {
   
     $params['member_id'] = $this->_member->id;
   
