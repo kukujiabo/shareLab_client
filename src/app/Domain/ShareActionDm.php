@@ -33,7 +33,7 @@ class ShareActionDm {
   
   }
 
-  public function getGift($params) {
+  public function getDetail($params) {
   
     $params['member_id'] = $this->_member->id;
 
