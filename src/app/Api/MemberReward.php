@@ -26,6 +26,20 @@ class MemberReward extends BaseApi {
         'reference' => 'reference|int|true||赠品来源',
         'type' => 'type|int|true||赠品类型'
       
+      ],
+
+      'listQuery' => [
+      
+        'member_name' => 'member_name|string|false||会员名称',
+        'reward_name' => 'reward_name|string|false||赠品名称',
+        'checked' => 'checked|int|false||核销状态',
+        'reference' => 'reference|int|false||赠送人id',
+        'type' => 'type|int|false||赠品类型',
+        'fields' => 'fields|string|false||字段',
+        'order' => 'order|string|false||赠品排序',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|20|每页条数'
+      
       ]
     
     ]); 
@@ -53,6 +67,18 @@ class MemberReward extends BaseApi {
   public function create() {
   
     return $this->dm->create($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询赠品列表
+   * @desc 查询赠品列表
+   *
+   * @return array data
+   */
+  public function listQuery() {
+  
+    return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
   
   }
 

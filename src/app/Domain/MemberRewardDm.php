@@ -33,4 +33,10 @@ class MemberRewardDm {
   
   }
 
+  public function listQuery($params) {
+  
+    return \App\request('App.MemberReward.GetList', $params);
+  
+  }
+
 }
