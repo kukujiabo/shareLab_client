@@ -41,6 +41,16 @@ class MemberReward extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'myReference' => [
+      
+        'reference' => 'reference|int|false||赠品类型',
+        'fields' => 'fields|string|false||字段',
+        'order' => 'order|string|false||赠品排序',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|20|每页条数'
+      
       ]
     
     ]); 
@@ -83,5 +93,16 @@ class MemberReward extends BaseApi {
   
   }
 
+  /**
+   * 查询我送出的赠品列表
+   * @desc 查询我送出的赠品列表
+   *
+   * @return array data
+   */
+  public function myReference() {
+  
+    return $this->dm->myReference($this->retriveRuleParams(__FUNCTION__)); 
+
+  }
 
 }

@@ -45,4 +45,12 @@ class MemberRewardDm {
   
   }
 
+  public function myReferenceList($params) {
+  
+    $params['reference'] = $this->_member->id;
+
+    return \App\request('App.MemberReward.GetList', $params);
+  
+  }
+
 }
