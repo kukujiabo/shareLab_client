@@ -25,4 +25,12 @@ class ShareActionDm {
   
   }
 
+  public function getGift($params) {
+  
+    $params['member_id'] = $this->_member->id;
+  
+    return \App\request('App.ShareAction.GetGift', $params);
+  
+  }
+
 }
