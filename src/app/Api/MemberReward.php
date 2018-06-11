@@ -30,6 +30,7 @@ class MemberReward extends BaseApi {
 
       'listQuery' => [
       
+        'member' => 'member|int|false|1|是否需要关联会员',
         'member_name' => 'member_name|string|false||会员名称',
         'reward_name' => 'reward_name|string|false||赠品名称',
         'checked' => 'checked|int|false||核销状态',
