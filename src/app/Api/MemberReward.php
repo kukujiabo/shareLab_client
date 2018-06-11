@@ -99,9 +99,9 @@ class MemberReward extends BaseApi {
    *
    * @return array data
    */
-  public function myReference() {
+  public function myReferenceList() {
   
-    return $this->dm->myReference($this->retriveRuleParams(__FUNCTION__)); 
+    return $this->dm->myReferenceList($this->retriveRuleParams(__FUNCTION__)); 
 
   }
 
