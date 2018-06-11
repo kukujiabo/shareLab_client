@@ -24,6 +24,13 @@ class ShareAction extends BaseApi {
       
         'share_code' => 'share_code|string|true||分享编码'
       
+      ],
+
+      'getDetail' => [
+      
+        'id' => 'id|int|false||分享id',
+        'share_code' => 'share_code|string|false||分享编码'
+      
       ]
     
     ]); 
@@ -52,6 +59,18 @@ class ShareAction extends BaseApi {
   public function getGift() {
   
     return $this->dm->getGift($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询赠品详情
+   * @desc 查询赠品详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 
