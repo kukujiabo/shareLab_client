@@ -34,6 +34,12 @@ class MemberRewardDm {
   }
 
   public function listQuery($params) {
+
+    if ($params['member']) {
+    
+      $params['member_id'] = $this->_member->id;
+    
+    }
   
     return \App\request('App.MemberReward.GetList', $params);
   
