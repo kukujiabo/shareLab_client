@@ -70,6 +70,8 @@ class Member extends BaseApi {
 
         'code' => 'code|string|true||微信code',
 
+        'share_code' => 'share_code|string|false||分享编号',
+
         'member_name' => 'member_name|string|false||会员名称',
 
         'portrait' => 'portrait|string|false||会员头像',
