@@ -43,9 +43,10 @@ class MemberReward extends BaseApi {
       
       ],
 
-      'myReference' => [
+      'myReferenceList' => [
       
-        'reference' => 'reference|int|false||赠品类型',
+        'cheked' => 'checked|int|false||是否已使用',
+        'type' => 'type|int|false||赠品类型',
         'fields' => 'fields|string|false||字段',
         'order' => 'order|string|false||赠品排序',
         'page' => 'page|int|false|1|页码',
