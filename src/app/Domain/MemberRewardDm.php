@@ -53,7 +53,7 @@ class MemberRewardDm {
   
   }
 
-  public function checkout() {
+  public function checkout($params) {
   
     $params['member_id'] = $this->_member->id;
 
