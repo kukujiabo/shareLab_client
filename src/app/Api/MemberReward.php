@@ -51,6 +51,14 @@ class MemberReward extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'checkout' => [
+      
+        'reward_id' => 'int|int|true||赠品id',
+        'num' => 'num|int|true||核销数量',
+        'code' => 'code|string|true||核销码'
+      
       ]
     
     ]); 
@@ -103,6 +111,18 @@ class MemberReward extends BaseApi {
   
     return $this->dm->myReferenceList($this->retriveRuleParams(__FUNCTION__)); 
 
+  }
+
+  /**
+   * 核销
+   * @desc 核销
+   *
+   * @return array data
+   */
+  public function checkout() {
+  
+    return $this->dm->checkout($this->retriveRuleParams(__FUNCTION__));
+  
   }
 
 }

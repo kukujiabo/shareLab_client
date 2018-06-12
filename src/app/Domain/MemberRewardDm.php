@@ -53,4 +53,12 @@ class MemberRewardDm {
   
   }
 
+  public function checkout() {
+  
+    $params['member_id'] = $this->_member->id;
+
+    return \App\request('App.MemberReward.Checkout', $params);
+  
+  }
+
 }
