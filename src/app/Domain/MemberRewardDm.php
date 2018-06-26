@@ -61,4 +61,12 @@ class MemberRewardDm {
   
   }
 
+  public function getOriginReward($params) {
+  
+    $params['member_id'] = $this->_member->id;
+  
+    return \App\request('App.MemberReward.GetOriginReward', $params);
+  
+  }
+
 }

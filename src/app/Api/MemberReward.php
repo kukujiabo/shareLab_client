@@ -61,6 +61,12 @@ class MemberReward extends BaseApi {
         'num' => 'num|int|true||核销数量',
         'code' => 'code|string|true||核销码'
       
+      ],
+
+      'getOriginReward' => [
+
+        'reward_id' => 'reward_id|int|true||赠品id'
+        
       ]
     
     ]); 
@@ -124,6 +130,18 @@ class MemberReward extends BaseApi {
   public function checkout() {
   
     return $this->dm->checkout($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 获取用户原始赠品
+   * @desc 获取用户原始赠品
+   *
+   * @return array data
+   */
+  public function getOriginReward() {
+  
+    return $this->dm->getOriginReward($this->retriveRuleParams(__FUNCTION__));
   
   }
 
