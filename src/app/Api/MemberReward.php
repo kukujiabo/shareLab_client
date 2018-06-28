@@ -24,6 +24,7 @@ class MemberReward extends BaseApi {
       
         'reward_id' => 'reward_id|int|true||赠品id',
         'reference' => 'reference|int|true||赠品来源',
+        'origin' => 'origin|int|true||是否原始赠品',
         'type' => 'type|int|true||赠品类型'
       
       ],
