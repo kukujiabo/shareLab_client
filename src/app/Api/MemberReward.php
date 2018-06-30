@@ -20,6 +20,14 @@ class MemberReward extends BaseApi {
       
       ],
 
+      'getEmptyInsList' => [
+      
+        'order' => 'order|string|false|num desc|排序',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+      
+      ],
+
       'create' => [
       
         'reward_id' => 'reward_id|int|true||赠品id',
@@ -70,6 +78,18 @@ class MemberReward extends BaseApi {
       ]
     
     ]); 
+  
+  }
+
+  /**
+   * 查询会员兑换过的赠品计数实例
+   * @desc 查询会员赠品计数实例
+   *
+   * @return array list
+   */
+  public function getEmptyInsList() {
+  
+    return $this->dm->getEmptyInsList($this->retriveRuleParams(__FUNCTION__));
   
   }
 

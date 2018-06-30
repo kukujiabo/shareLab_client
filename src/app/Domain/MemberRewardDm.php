@@ -25,6 +25,14 @@ class MemberRewardDm {
   
   }
 
+  public function getEmptyInsList() {
+
+    $params['member_id'] = $this->_member->id;
+  
+    return \App\request('App.MemberReward.GetEmptyInsList', $params);
+  
+  }
+
   public function create($params) {
   
     $params['member_id'] = $this->_member->id;
