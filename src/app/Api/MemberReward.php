@@ -67,7 +67,8 @@ class MemberReward extends BaseApi {
       'checkout' => [
       
         'reward_id' => 'reward_id|int|true||赠品id',
-        'code' => 'code|string|true||核销码'
+        'code' => 'code|string|true||核销码',
+        'checked' => 'checked|int|true||核销状态'
       
       ],
 
