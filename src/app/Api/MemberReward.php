@@ -74,7 +74,8 @@ class MemberReward extends BaseApi {
 
       'getOriginReward' => [
 
-        'reward_id' => 'reward_id|int|true||赠品id'
+        'reward_id' => 'reward_id|int|true||赠品id',
+        'checked' => 'checked|int|true||核销状态'
         
       ]
     
