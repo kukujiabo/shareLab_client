@@ -22,6 +22,7 @@ class Member extends BaseApi {
 
       'bindEncryptPhone' => [
       
+        'app_name' => 'app_name|string|true||应用名称',
         'encryptedData' => 'encryptedData|string|true||加密数据',
         'iv' => 'iv|string|true||加密算法的初始向量',
         'session_key' => 'session_key|string|true||会话密钥'
