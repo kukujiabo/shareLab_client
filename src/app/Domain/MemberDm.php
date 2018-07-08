@@ -98,4 +98,20 @@ class MemberDm {
   
   }
 
+  public function bindEncryptedPhone($params) {
+
+    if ($this->_member) {
+    
+      $params['member_id'] = $this->_member->id
+    
+    } else {
+    
+      return null;
+    
+    }
+  
+    return \App\request('App.Member.BindEncryptedData', $params); 
+  
+  }
+
 }

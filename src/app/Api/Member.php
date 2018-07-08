@@ -20,6 +20,14 @@ class Member extends BaseApi {
       
       ],
 
+      'bindEncryptPhone' => [
+      
+        'encryptedData' => 'encryptedData|string|true||加密数据',
+        'iv' => 'iv|string|true||加密算法的初始向量',
+        'session_key' => 'session_key|string|true||会话密钥'
+      
+      ],
+
       'loginViaPassword' => [
       
         'mobile' => 'mobile|string|true||手机号',
@@ -177,6 +185,18 @@ class Member extends BaseApi {
   public function listQuery() {
   
     return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 解密绑定手机号
+   * @desc 解密绑定手机号
+   *
+   * @return string phone
+   */
+  public function bindEncryptedData() {
+  
+    return $this->dm->bindEncryptedData($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
