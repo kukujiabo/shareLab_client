@@ -87,6 +87,15 @@ class Member extends BaseApi {
 
         'gender' => 'gender|int|false||会员性别'
       
+      ],
+
+      'bindEncryptedData' => [
+      
+        'app_name' => 'app_name|string|true||应用名称',
+        'encryptedData' => 'encryptedData|string|true||加密数据',
+        'session_key' => 'session_key|string|true||会话密钥',
+        'iv' => 'iv|string|true||解密密钥'
+      
       ]
     
     ]);
