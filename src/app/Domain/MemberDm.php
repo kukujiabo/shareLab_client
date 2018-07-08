@@ -98,7 +98,7 @@ class MemberDm {
   
   }
 
-  public function bindEncryptedPhone($params) {
+  public function bindEncryptedData($params) {
 
     if ($this->_member) {
     
