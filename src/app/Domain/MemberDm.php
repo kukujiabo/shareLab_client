@@ -102,7 +102,7 @@ class MemberDm {
 
     if ($this->_member) {
     
-      $params['member_id'] = $this->_member->id
+      $params['member_id'] = $this->_member->id;
     
     } else {
     
