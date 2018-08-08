@@ -46,6 +46,12 @@ class Shop extends BaseApi {
       
         'shop_id' => 'shop_id|int|true||门店id'
       
+      ],
+
+      'getShopByRecommendCode' => [
+      
+        'recommend_code' => 'recommend_code|string|true||推荐码'
+
       ]
     
     
@@ -110,6 +116,18 @@ class Shop extends BaseApi {
   public function getFocusCount() {
   
     return $this->dm->getFocusCount($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询店铺信息
+   * @desc 查询店铺信息
+   *
+   * @return array data
+   */
+  public function getShopByRecommendCode() {
+  
+    return $this->dm->getShopByRecommendCode($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

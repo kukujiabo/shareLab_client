@@ -59,4 +59,10 @@ class ShopDm {
   
   }
 
+  public function getShopByRecommendCode($params) {
+  
+    return \App\request('App.Shop.GetShopByRecommendCode', $params); 
+  
+  }
+
 }
