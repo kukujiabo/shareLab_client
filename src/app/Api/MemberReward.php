@@ -77,6 +77,11 @@ class MemberReward extends BaseApi {
         'reward_id' => 'reward_id|int|true||赠品id',
         'checked' => 'checked|int|true||核销状态'
         
+      ],
+
+      'getMemberCheckedMoneySum' => [
+      
+      
       ]
     
     ]); 
@@ -164,6 +169,18 @@ class MemberReward extends BaseApi {
   public function getOriginReward() {
   
     return $this->dm->getOriginReward($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询用户核销赠品总价值
+   * @desc 查询用户核销赠品总价值
+   *
+   * @return array data
+   */
+  public function getMemberCheckedMoneySum() {
+  
+    return $this->dm->getMemberCheckedMoneySum($this->retriveRuleParams(__FUNCTION__));
   
   }
 

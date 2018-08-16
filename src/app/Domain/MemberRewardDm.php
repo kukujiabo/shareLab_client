@@ -75,4 +75,12 @@ class MemberRewardDm {
   
   }
 
+  public function getMemberCheckedMoneySum($params) {
+  
+    $params['member_id'] = $this->_member->id;
+
+    return \App\request('App.MemberReward.GetMemberCheckedMoneySum', $params);
+  
+  }
+
 }
