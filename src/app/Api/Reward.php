@@ -25,6 +25,8 @@ class Reward extends BaseApi {
         'shop_name' => 'shop_name|string|false||门店名称',
         'shop_id' => 'shop_id|int|false||门店id',
         'fields' => 'fields|string|false|*|字段',
+        'lat' => 'lat|string|false||纬度',
+        'lng' => 'lng|string|false||经度',
         'order' => 'order|string|false|created_at desc|排序',
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
