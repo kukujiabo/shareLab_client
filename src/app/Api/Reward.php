@@ -23,6 +23,8 @@ class Reward extends BaseApi {
       
         'keywords' => 'keywords|string|true||关键字',
         'order' => 'order|string|false||排序',
+        'lat' => 'lat|string|false||纬度',
+        'lng' => 'lng|string|false||经度',
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|10|每页条数'
       
