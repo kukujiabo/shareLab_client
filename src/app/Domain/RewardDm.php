@@ -33,4 +33,12 @@ class RewardDm {
   
   }
 
+  public function keywordList($data) {
+  
+    $data['member_id'] = $this->_member->id;
+  
+    return \App\request('App.Reward.KeywordList', $data);
+  
+  }
+
 }

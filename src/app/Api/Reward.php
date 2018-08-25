@@ -19,6 +19,15 @@ class Reward extends BaseApi {
       
       ],
 
+      'keywordList' => [
+      
+        'keywords' => 'keywords|string|true||关键字',
+        'order' => 'order|string|false||排序',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|10|每页条数'
+      
+      ],
+
       'rewardShopUnionList' => [
       
         'reward_name' => 'reward_name|string|false||赠品名称',
@@ -59,6 +68,18 @@ class Reward extends BaseApi {
 
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
 
+  }
+
+  /**
+   * 关键字查询
+   * @desc 关键字查询
+   *
+   * @return array list
+   */
+  public function keywordList() {
+  
+    return $this->dm->keywordList($this->retriveRuleParams(__FUNCTION__));
+  
   }
 
 }
