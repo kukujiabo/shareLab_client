@@ -114,4 +114,12 @@ class MemberDm {
   
   }
 
+  public function checkMemberPhone($data) {
+  
+    $data['member_id'] = $this->_member->id;
+
+    return \App\request('App.Member.BindEncryptedData', $data); 
+  
+  }
+
 }

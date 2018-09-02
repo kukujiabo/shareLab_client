@@ -96,6 +96,11 @@ class Member extends BaseApi {
         'session_key' => 'session_key|string|true||会话密钥',
         'iv' => 'iv|string|true||解密密钥'
       
+      ],
+
+      'checkMemberPhone' => [
+      
+      
       ]
     
     ]);
@@ -207,6 +212,18 @@ class Member extends BaseApi {
   public function bindEncryptedData() {
   
     return $this->dm->bindEncryptedData($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 校验用户是否绑定手机号
+   * @desc 校验用户是否绑定手机号
+   *
+   * @return mixed string
+   */
+  public function checkMemberPhone() {
+  
+    return $this->dm->checkMemberPhone($this->retriveRuleParams(__FUNCTION__));
   
   }
 
