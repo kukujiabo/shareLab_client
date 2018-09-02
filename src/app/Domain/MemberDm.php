@@ -118,7 +118,7 @@ class MemberDm {
   
     $data['member_id'] = $this->_member->id;
 
-    return \App\request('App.Member.BindEncryptedData', $data); 
+    return \App\request('App.Member.CheckMemberPhone', $data); 
   
   }
 
