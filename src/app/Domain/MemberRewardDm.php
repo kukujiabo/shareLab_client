@@ -17,7 +17,7 @@ class MemberRewardDm {
 
   }
 
-  public function getInsList() {
+  public function getInsList($params) {
 
     $params['member_id'] = $this->_member->id;
   
