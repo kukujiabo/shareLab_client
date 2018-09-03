@@ -14,6 +14,7 @@ class MemberReward extends BaseApi {
     
       'getInsList' => [
       
+        'keywords' => 'keywords|string|false||关键字',
         'order' => 'order|string|false|num desc|排序',
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
