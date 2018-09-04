@@ -35,6 +35,7 @@ class Reward extends BaseApi {
         'reward_name' => 'reward_name|string|false||赠品名称',
         'shop_name' => 'shop_name|string|false||门店名称',
         'shop_id' => 'shop_id|int|false||门店id',
+        'in_date' => 'in_date|int|false|0|是否在有效期内',
         'fields' => 'fields|string|false|*|字段',
         'lat' => 'lat|string|false||纬度',
         'lng' => 'lng|string|false||经度',
