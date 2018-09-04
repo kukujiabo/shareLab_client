@@ -17,6 +17,14 @@ class Wechat extends BaseApi {
       
         'code' => 'code|string|true||获取用户微信openid'
       
+      ],
+
+      'getMiniMsgList' => [
+      
+        'page' => 'page|int|false|1|页码',
+
+        'page_size' => 'page_size|int|false|10|每页条数'
+      
       ]
     
     ]);
@@ -31,6 +39,12 @@ class Wechat extends BaseApi {
   public function getOpenId() {
   
     $params = $this->retriveRuleParams(__FUNCTION__);
+  
+  }
+
+  public function getMiniMsgList() {
+  
+    return $this->dm->getMiniList($this->retriveRuleParams(__FUNCTION__));
   
   }
 
