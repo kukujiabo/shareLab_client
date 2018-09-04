@@ -44,7 +44,7 @@ class Wechat extends BaseApi {
 
   public function getMiniMsgList() {
   
-    return $this->dm->getMiniList($this->retriveRuleParams(__FUNCTION__));
+    return $this->dm->getMiniMsgList($this->retriveRuleParams(__FUNCTION__));
   
   }
 
