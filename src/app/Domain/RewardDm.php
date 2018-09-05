@@ -20,6 +20,10 @@ class RewardDm {
   public function rewardShopUnionList($data) {
 
     $data['member_id'] = $this->_member->id;
+
+    $data['shop_status'] = 1;
+
+    $data['reward_status'] = 1;
   
     return \App\request('App.Reward.RewardShopUnionList', $data);
   
