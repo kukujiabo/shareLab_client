@@ -21,6 +21,8 @@ class RewardDm {
 
     $data['member_id'] = $this->_member->id;
 
+    $data['in_date'] = 1;
+
     $data['shop_status'] = 1;
 
     $data['reward_status'] = 1;
