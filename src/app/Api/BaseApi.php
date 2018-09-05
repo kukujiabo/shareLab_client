@@ -115,7 +115,11 @@ class BaseApi extends Api {
 
       //if (isset($_REQUEST[$paramName]) && ($this->$paramName != '' || $this->$paramName === 0 || $funcRules[$paramName]['default'] != '')) {
       //  
+      if (isset($_REQUEST[$paramName])) {
+
         $params[$paramName] = $this->$paramName;
+
+      }
 
       //}
 
