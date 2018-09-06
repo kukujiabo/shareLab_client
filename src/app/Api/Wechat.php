@@ -25,6 +25,12 @@ class Wechat extends BaseApi {
 
         'page_size' => 'page_size|int|false|10|每页条数'
       
+      ],
+
+      'setMessageViewed' => [
+      
+        'id' => 'id|int|true||消息id'
+      
       ]
     
     ]);
