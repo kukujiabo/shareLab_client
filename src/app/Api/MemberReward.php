@@ -84,6 +84,12 @@ class MemberReward extends BaseApi {
       'getMemberCheckedMoneySum' => [
       
       
+      ],
+      
+      'getDetail' => [
+      
+        'id' => 'id|int|true||会员赠品实例id'
+      
       ]
     
     ]); 
@@ -183,6 +189,18 @@ class MemberReward extends BaseApi {
   public function getMemberCheckedMoneySum() {
   
     return $this->dm->getMemberCheckedMoneySum($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询会员记录详情
+   * @desc 查询会员记录详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 

@@ -83,4 +83,10 @@ class MemberRewardDm {
   
   }
 
+  public function getDetail($params) {
+  
+    return \App\request('App.MemberReward.GetDetail', $params); 
+  
+  }
+
 }

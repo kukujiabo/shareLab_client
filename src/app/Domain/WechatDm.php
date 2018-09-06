@@ -19,9 +19,17 @@ class WechatDm {
 
   public function getMiniMsgList($params) {
 
-    $params['openid'] =$this->_member->wx_mnopenid;
+    $params['openid'] = $this->_member->wx_mnopenid;
   
     return \App\request('App.WechatTemplateMessage.GetMiniMsgList', $params);
+  
+  }
+
+  public function setMessageViewed() {
+  
+    $params['openid'] = $this->_member->wx_mnopenid;
+
+    return \App\request('App.WechatTemplateMessage.SetViewed', $params);
   
   }
 

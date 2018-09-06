@@ -35,6 +35,7 @@ class Wechat extends BaseApi {
    * 获取微信openid
    * @desc 获取微信openid
    *
+   * @return
    */
   public function getOpenId() {
   
@@ -42,9 +43,27 @@ class Wechat extends BaseApi {
   
   }
 
+  /**
+   * 查询小程序模版消息列表
+   * @desc 查询小程序模版消息列表
+   *
+   * @return
+   */
   public function getMiniMsgList() {
   
     return $this->dm->getMiniMsgList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 设置消息为已读
+   * @desc 设置消息为已读
+   *
+   * @return
+   */
+  public function setMessageViewed() {
+  
+    return $this->dm->setMessageViewed($this->retriveRuleParams(__FUNCTION__));
   
   }
 
