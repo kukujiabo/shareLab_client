@@ -33,4 +33,12 @@ class WechatDm {
   
   }
 
+  public function haveUnviewedMsg() {
+  
+    $params['openid'] = $this->_member->wx_mnopenid;
+
+    return \App\request('App.WechatTemplateMessage.HaveUnviewedMsg', $params);
+  
+  }
+
 }

@@ -31,6 +31,11 @@ class Wechat extends BaseApi {
       
         'id' => 'id|int|true||消息id'
       
+      ],
+
+      'haveUnviewedMsg' => [
+      
+      
       ]
     
     ]);
@@ -73,6 +78,19 @@ class Wechat extends BaseApi {
   
   }
 
+  /**
+   * 查询是否有未读消息
+   * @desc 查询是否有未读消息
+   *
+   * @return boolean true/false
+   */
+  public function haveUnviewedMsg() {
+  
+    return $this->dm->haveUnviewedMsg($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }
+
 
 
