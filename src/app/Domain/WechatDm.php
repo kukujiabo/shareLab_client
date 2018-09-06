@@ -25,7 +25,7 @@ class WechatDm {
   
   }
 
-  public function setMessageViewed() {
+  public function setMessageViewed($params) {
   
     $params['openid'] = $this->_member->wx_mnopenid;
 
