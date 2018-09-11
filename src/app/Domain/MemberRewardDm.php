@@ -25,7 +25,7 @@ class MemberRewardDm {
   
   }
 
-  public function getEmptyInsList() {
+  public function getEmptyInsList($params) {
 
     $params['member_id'] = $this->_member->id;
   
