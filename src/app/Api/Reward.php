@@ -22,6 +22,7 @@ class Reward extends BaseApi {
       'keywordList' => [
       
         'keywords' => 'keywords|string|true||关键字',
+        'in_date' => 'in_date|int|true||是否在有效期内',
         'order' => 'order|string|false||排序',
         'lat' => 'lat|string|false||纬度',
         'lng' => 'lng|string|false||经度',
