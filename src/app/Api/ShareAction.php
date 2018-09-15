@@ -31,6 +31,12 @@ class ShareAction extends BaseApi {
         'id' => 'id|int|false||分享id',
         'share_code' => 'share_code|string|false||分享编码'
       
+      ],
+
+      'checkShareAction' => [
+      
+        'share_code' => 'share_code|string|false||分享编码'
+      
       ]
     
     ]); 
@@ -71,6 +77,18 @@ class ShareAction extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 校验分享动作
+   * @desc 校验分享动作
+   *
+   * @return
+   */
+  public function checkShareAction() {
+  
+    return $this->dm->checkShareAction($this->retriveRuleParams(__FUNCTION__));
   
   }
 
