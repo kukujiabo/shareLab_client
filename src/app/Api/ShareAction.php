@@ -22,7 +22,8 @@ class ShareAction extends BaseApi {
 
       'getGift' => [
       
-        'share_code' => 'share_code|string|true||分享编码'
+        'share_code' => 'share_code|string|true||分享编码',
+        'form_id' => 'form_id|string|true||formId'
       
       ],
 
