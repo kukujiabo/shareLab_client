@@ -57,6 +57,8 @@ class MemberRewardDm {
   
     $params['reference'] = $this->_member->id;
 
+    $params['origin'] = 1;
+
     return \App\request('App.MemberReward.GetList', $params);
   
   }
