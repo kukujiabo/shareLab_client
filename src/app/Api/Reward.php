@@ -44,6 +44,12 @@ class Reward extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'rewardShopUnionDetail' => [
+      
+        'reward_id' => 'reward_id|int|true||赠品id'
+      
       ]
     
     ]);
@@ -83,6 +89,18 @@ class Reward extends BaseApi {
   public function keywordList() {
   
     return $this->dm->keywordList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 门店赠品管理数据详情接口
+   * @desc 门店赠品管理数据详情接口
+   *
+   * @return array data
+   */
+  public function rewardShopUnionDetail() {
+  
+    return $this->dm->rewardShopUnionDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 

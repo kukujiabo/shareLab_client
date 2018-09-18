@@ -47,4 +47,10 @@ class RewardDm {
   
   }
 
+  public function rewardShopUnionDetail($data) {
+  
+    return \App\request('App.Reward.RewardShopUnionDetail', $data);
+  
+  }
+
 }
